@@ -12,3 +12,15 @@
             return arr;
     }
     console.log(reverse('Programming'));
+
+
+//SOLUTION - 2: using for of loop
+    function reverse(str) {
+        let reversed = '';
+
+        for (let character of str) {
+            reversed = character + reversed;
+        }
+            return reversed;
+    }
+    console.log(reverse("JavaScript"));
