@@ -24,3 +24,12 @@
             return reversed;
     }
     console.log(reverse("JavaScript"));
+
+
+//SOLUTION - 2: using reduce helper function
+    function reverse(str) {
+        return str.split('').reduce((reversed, character) => {     return character + reversed;
+    
+        }, '');
+    }
+    console.log(reverse("Coding"));    
