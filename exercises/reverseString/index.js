@@ -26,9 +26,9 @@
     console.log(reverse("JavaScript"));
 
 
-//SOLUTION - 2: using reduce helper function
+//SOLUTION - 3: using reduce helper function
     function reverse(str) {
-        return str.split('').reduce((reversed, character) => {     return character + reversed;
+        return str.split('').reduce((reversed, character) => { return character + reversed;
     
         }, '');
     }
