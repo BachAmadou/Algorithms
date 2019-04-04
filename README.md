@@ -8,3 +8,5 @@ Below are the topic that will be covered in these series:
 -- Sorting.
 -- fizzbuzz. 
 -- Palindrome
+-- ReverseInt
+-- Maxchars
