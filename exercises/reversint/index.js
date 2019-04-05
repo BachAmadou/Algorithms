@@ -9,7 +9,7 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(num) {
-    
+
     const reversed = num.toString().split('').reverse().join('');
 
     return parseInt(reversed) * Math.sign(num);
@@ -17,3 +17,4 @@ function reverseInt(num) {
 console.log(reverseInt(12));
 console.log(reverseInt(200));
 console.log(reverseInt(-35,));
+
