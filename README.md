@@ -10,3 +10,4 @@ Below are the topic that will be covered in these series:
 -- Palindrome
 -- ReverseInt
 -- Maxchars
+-- FizzBuss
