@@ -8,22 +8,39 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+// SOLUTION - 1: Using "for of loop"
+
+// function chunk(array, size) {
+//     // Create a variable to hold the chunked array
+//     const chunkedArray = [];
+
+//     // Iterate through the initial array
+//     for (let element of array) {
+//         // Get the last element inside of the chunked array
+//         const lastElement = chunkedArray[chunkedArray.length - 1];
+
+//         if (!lastElement || chunkedArray.length === size) {
+//             chunkedArray.push([element]);
+//         } else {
+//             lastElement.push(element);
+//         }
+//     }
+//     return chunkedArray;
+// }
+// cconsole.log(chunk([1, 2, 3, 4, 5, 6, 7], 2));
+
+
+
+//SOLUTION - 2: Using "slice"
 function chunk(array, size) {
     // Create a variable to hold the chunked array
     const chunkedArray = [];
+    let index = 0;
 
-    // Iterate through the initial array
-    for (let element of array) {
-        // Get the last element inside of the chunked array
-        const lastElement = chunkedArray[chunkedArray.length - 1];
-
-        if (!lastElement || chunkedArray.length === size) {
-            chunkedArray.push([element]);
-        } else {
-            lastElement.push(element);
-        }
+    while(index < array.length) {
+        chunkedArray.push(array.slice(index, index + size));
+        index += size;
     }
-    return chunkedArray;
+    return chunkedArray;   
 }
-
-module.exports = chunk;
+console.log(chunk([1, 2, 3, 4, 5, 6, 7], 2));
